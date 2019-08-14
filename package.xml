@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+    <name>CP_LoginSecurity</name>
+    <version>0.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Customer Login Security</summary>
+    <description>&lt;b&gt;About the extension :&lt;/b&gt;&lt;br/&gt;&lt;br /&gt;&#xD;
+LoginSecurity extension developed by Commercepundit provides Login Security that checks password on every page with your set password.if user is login in  lets say Firefox browser and he has sent request to reset password from chrome browser and reset password successfully from chrome now if he will access any page from Firefox he will be logged out and will ask to login again with new password.With this customer will be logged out from every browser if password has been changed.&#xD;
+ &lt;ul&gt;&#xD;
+&lt;li&gt;Easy to use&lt;/li&gt;&#xD;
+&lt;li&gt;Checks Password every time you refresh page&lt;/li&gt;&#xD;
+&lt;li&gt;Enable and add Disable from admin&lt;/li&gt;&#xD;
+&lt;li&gt;Easy to install and manage.&lt;/li&gt;&#xD;
+&lt;/ul&gt;</description>
+    <notes>Customer Login Security</notes>
+    <authors><author><name>Commerce Pundit</name><user>CPExtensions</user><email>magento@commercepundit.com</email></author></authors>
+    <date>2015-10-01</date>
+    <time>06:11:37</time>
+    <contents><target name="magecommunity"><dir name="CP"><dir name="LoginSecurity"><dir name="Helper"><file name="Data.php" hash="78b8225c957c0568ae561db21b5f0a34"/></dir><dir name="Model"><file name="Observer.php" hash="844834ef4e436ccb2ab5aeef505565e6"/></dir><dir name="etc"><file name="adminhtml.xml" hash="507861df98aee6c2f089526ddbe63954"/><file name="config.xml" hash="124979c89a7784470f6b34ae47a14235"/><file name="system.xml" hash="e567d94c90af668c942d728fdd351356"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CP_LoginSecurity.xml" hash="ad97541daba24abc96f0596366dfad06"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

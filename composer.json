@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/CP_LoginSecurity",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Customer Login Security",
+    "authors": [
+    {
+        "name": "Commerce Pundit",
+        "email": "magento@commercepundit.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

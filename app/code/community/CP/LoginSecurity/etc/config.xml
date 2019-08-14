@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Commerce Pundit Technologies
+ * @package     CP_LoginSecurity
+ * @copyright   Copyright (c) 2015 Commerce Pundit Technologies. (http://www.commercepundit.com)    
+* @author   <<Dharmesh Hariyani>>    
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<modules>
+		<CP_LoginSecurity>
+			<version>1.0.0</version>
+		</CP_LoginSecurity>
+	</modules>
+	<global>
+        <helpers>
+            <cp_loginsecurity>
+                <class>CP_LoginSecurity_Helper</class>
+            </cp_loginsecurity>
+        </helpers>
+		<models>
+            <cp_loginsecurity>
+                <class>CP_LoginSecurity_Model</class>
+            </cp_loginsecurity>
+        </models>
+		<events>
+			<http_response_send_before>
+				<observers>
+					<cp_loginsecurity_on_forgot_password>
+						<type>singleton</type>
+						<class>cp_loginsecurity/observer</class>
+						<method>loginsecurityOnPasswordChange</method>
+					</cp_loginsecurity_on_forgot_password>
+				</observers>
+			</http_response_send_before>
+			
+			<customer_login>
+				<observers>
+					<cp_set_current_password>
+						<type>singleton</type>
+						<class>cp_loginsecurity/observer</class>
+						<method>setCurrentPassword</method>
+					</cp_set_current_password>
+				</observers>
+			</customer_login>
+
+            <controller_action_predispatch>
+                <observers>
+                    <cp_error_message_print>
+                        <type>singleton</type>
+                        <class>cp_loginsecurity/observer</class>
+                        <method>setErrorMessage</method>
+                    </cp_error_message_print>
+                </observers>
+            </controller_action_predispatch>
+
+		</events>		
+	</global>
+</config>
