@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/CP_LoginSecurity",
+    "name": "openmage-module-fostering\/cp_loginsecurity",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Customer Login Security",
     "authors": [
